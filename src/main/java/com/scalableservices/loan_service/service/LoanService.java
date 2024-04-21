@@ -16,7 +16,7 @@ public class LoanService {
     private LoanRepository loanRepository;
 
     private boolean VerifyCreditScore(int userId) {
-        final String uri = "http://localhost:8079/verify/credit_score?userId="
+        final String uri = "http://localhost:8079/vrf/verify/credit_score?userId="
 		 + userId;
 		RestTemplate restTemplate = new RestTemplate();
         boolean result = restTemplate.getForObject(uri, boolean.class);
